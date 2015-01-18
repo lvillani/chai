@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A441A6C130200F80CCE /* AppDelegate.swift */; };
+		BF7F8A471A6C130200F80CCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Images.xcassets */; };
+		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
+		BF7F8A561A6C130200F80CCE /* TheineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A551A6C130200F80CCE /* TheineTests.swift */; };
+		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF7F8A501A6C130200F80CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7F8A371A6C130200F80CCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7F8A3E1A6C130200F80CCE;
+			remoteInfo = Theine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF7F8A3F1A6C130200F80CCE /* Theine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7F8A441A6C130200F80CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF7F8A461A6C130200F80CCE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF7F8A491A6C130200F80CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BF7F8A4F1A6C130200F80CCE /* TheineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7F8A541A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7F8A551A6C130200F80CCE /* TheineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheineTests.swift; sourceTree = "<group>"; };
+		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
+		BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Theine-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF7F8A3C1A6C130200F80CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7F8A4C1A6C130200F80CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF7F8A361A6C130200F80CCE = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A401A6C130200F80CCE /* Products */,
+				BF7F8A411A6C130200F80CCE /* Theine */,
+				BF7F8A521A6C130200F80CCE /* TheineTests */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7F8A401A6C130200F80CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A3F1A6C130200F80CCE /* Theine.app */,
+				BF7F8A4F1A6C130200F80CCE /* TheineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7F8A411A6C130200F80CCE /* Theine */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */,
+				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
+				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
+				BF7F8A461A6C130200F80CCE /* Images.xcassets */,
+				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
+				BF7F8A421A6C130200F80CCE /* Supporting Files */,
+			);
+			path = Theine;
+			sourceTree = "<group>";
+		};
+		BF7F8A421A6C130200F80CCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A431A6C130200F80CCE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF7F8A521A6C130200F80CCE /* TheineTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A551A6C130200F80CCE /* TheineTests.swift */,
+				BF7F8A531A6C130200F80CCE /* Supporting Files */,
+			);
+			path = TheineTests;
+			sourceTree = "<group>";
+		};
+		BF7F8A531A6C130200F80CCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F8A541A6C130200F80CCE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF7F8A3E1A6C130200F80CCE /* Theine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Theine" */;
+			buildPhases = (
+				BF7F8A3B1A6C130200F80CCE /* Sources */,
+				BF7F8A3C1A6C130200F80CCE /* Frameworks */,
+				BF7F8A3D1A6C130200F80CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Theine;
+			productName = Theine;
+			productReference = BF7F8A3F1A6C130200F80CCE /* Theine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF7F8A4E1A6C130200F80CCE /* TheineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7F8A5C1A6C130200F80CCE /* Build configuration list for PBXNativeTarget "TheineTests" */;
+			buildPhases = (
+				BF7F8A4B1A6C130200F80CCE /* Sources */,
+				BF7F8A4C1A6C130200F80CCE /* Frameworks */,
+				BF7F8A4D1A6C130200F80CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF7F8A511A6C130200F80CCE /* PBXTargetDependency */,
+			);
+			name = TheineTests;
+			productName = TheineTests;
+			productReference = BF7F8A4F1A6C130200F80CCE /* TheineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7F8A371A6C130200F80CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lorenzo Villani";
+				TargetAttributes = {
+					BF7F8A3E1A6C130200F80CCE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BF7F8A4E1A6C130200F80CCE = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BF7F8A3E1A6C130200F80CCE;
+					};
+				};
+			};
+			buildConfigurationList = BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Theine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7F8A361A6C130200F80CCE;
+			productRefGroup = BF7F8A401A6C130200F80CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF7F8A3E1A6C130200F80CCE /* Theine */,
+				BF7F8A4E1A6C130200F80CCE /* TheineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7F8A3D1A6C130200F80CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7F8A471A6C130200F80CCE /* Images.xcassets in Resources */,
+				BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7F8A4D1A6C130200F80CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF7F8A3B1A6C130200F80CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
+				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7F8A4B1A6C130200F80CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7F8A561A6C130200F80CCE /* TheineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF7F8A511A6C130200F80CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7F8A3E1A6C130200F80CCE /* Theine */;
+			targetProxy = BF7F8A501A6C130200F80CCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF7F8A481A6C130200F80CCE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7F8A491A6C130200F80CCE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF7F8A571A6C130200F80CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7F8A581A6C130200F80CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF7F8A5A1A6C130200F80CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Theine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Theine/Theine-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7F8A5B1A6C130200F80CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Theine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Theine/Theine-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		BF7F8A5D1A6C130200F80CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TheineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theine.app/Contents/MacOS/Theine";
+			};
+			name = Debug;
+		};
+		BF7F8A5E1A6C130200F80CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TheineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theine.app/Contents/MacOS/Theine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Theine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7F8A571A6C130200F80CCE /* Debug */,
+				BF7F8A581A6C130200F80CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Theine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7F8A5A1A6C130200F80CCE /* Debug */,
+				BF7F8A5B1A6C130200F80CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF7F8A5C1A6C130200F80CCE /* Build configuration list for PBXNativeTarget "TheineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7F8A5D1A6C130200F80CCE /* Debug */,
+				BF7F8A5E1A6C130200F80CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF7F8A371A6C130200F80CCE /* Project object */;
+}
