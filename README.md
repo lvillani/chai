@@ -19,7 +19,7 @@ __NOTE__: The binary isn't signed.
 
 ## Don't We Have Caffeine Already?
 
-Theine is better in a number of ways:
+Theine is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
 * The monochrome icon blends in nicely with OS X Yosemite.
 * Uses power assertions to keep your Mac awake.
