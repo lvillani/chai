@@ -22,7 +22,7 @@ __NOTE__: The binary isn't signed.
 Theine is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
 * The monochrome icon blends in nicely with OS X Yosemite.
-* Uses power assertions to keep your Mac awake.
+* Uses [power assertions](https://developer.apple.com/library/mac/documentation/IOKit/Reference/IOPMLib_header_reference/) to keep your Mac awake.
 * Open source.
 * Tea is supposedly better than coffee.
 
