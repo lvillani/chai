@@ -1,7 +1,5 @@
 # Theine
 
-<img src="https://rawgit.com/lvillani/theine/master/logo.svg" align="right" width="150" height="150"/>
-
 _Don't let your Mac fall asleep, like a sir_
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
