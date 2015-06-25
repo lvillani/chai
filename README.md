@@ -8,21 +8,48 @@ _Don't let your Mac fall asleep, like a sir_
 
 --------------------------------------------------------------------------------
 
-## Usage
+## Introduction
 
-1. [Get it while it's hot](https://github.com/lvillani/theine/releases).
-2. Start the app and click the mug icon to enable/disable Theine. When the mug is empty, Theine is
-   disabled. When it's full, your Mac won't sleep.
+Theine is a lightweight app that lives in your menu bar. It looks like a cup:
 
-__NOTE__: The binary isn't signed.
+![Menubar with Theine](theine-menubar.png)
+
+---
+
+When the cup is full, Theine won't let your Mac fall asleep:
+
+![Theine is on](theine-on.png)
+
+---
+
+When the cup is empty, Theine will let your Mac fall asleep:
+
+![Theine is off](theine-off.png)
+
+
+## Installation
+
+Download the latest release (a .zip file) from
+[here](https://github.com/lvillani/theine/releases/latest) and move the application to
+`/Applications`.
+
+### Start at Login
+
+To start Theine at login:
+
+* Open System Preferences;
+* Click "Users & Groups";
+* Click "Login Items";
+* Drag and Drop Theine from the Finder to the list.
 
 
 ## Don't We Have Caffeine Already?
 
 Theine is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
-* The monochrome icon blends in nicely with OS X Yosemite.
+* The monochrome icon blends in nicely with OS X Yosemite, especially with the dark theme.
 * Uses [power assertions](https://developer.apple.com/library/mac/documentation/IOKit/Reference/IOPMLib_header_reference/) to keep your Mac awake.
+* It runs in the [sandbox](https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html).
 * Open source.
 * Tea is supposedly better than coffee.
 
