@@ -23,19 +23,19 @@ enum Assertion: String {
 
 // This is seemingly not exposed to Swift
 enum AssertionLevel: UInt32 {
-    case Off = 0
-    case On = 255
+    case off = 0
+    case on = 255
 }
 
 class PowerAssertion {
     var assertion: IOPMAssertionID = 0
 
     init(named name: String) {
-        let ret = IOPMAssertionCreateWithName(Assertion.NoDisplaySleep.rawValue, AssertionLevel.On.rawValue, name, &assertion)
+        let ret = IOPMAssertionCreateWithName(Assertion.NoDisplaySleep.rawValue as CFString, AssertionLevel.on.rawValue, name as CFString, &assertion)
 
         // FIXME: Make this a fallible initializer
         if ret != kIOReturnSuccess {
-            println("Oops: Couldn't grab the power assertion")
+            NSLog("Oops: Couldn't grab the power assertion")
         }
     }
 
@@ -43,7 +43,7 @@ class PowerAssertion {
         let ret = IOPMAssertionRelease(assertion)
 
         if ret != kIOReturnSuccess {
-            println("Oops: Couldn't release the power assertion")
+            NSLog("Oops: Couldn't release the power assertion")
         }
     }
 }

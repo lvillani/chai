@@ -22,23 +22,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     var powerAssertion: PowerAssertion!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        iconOff = NSImage(named: "Mug-Empty")
-        iconOff.setTemplate(true)
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        iconOff = NSImage(named: NSImage.Name(rawValue: "Mug-Empty"))
+        iconOff.isTemplate = true
 
-        iconOn = NSImage(named: "Mug")
-        iconOn.setTemplate(true)
+        iconOn = NSImage(named: NSImage.Name(rawValue: "Mug"))
+        iconOn.isTemplate = true
 
-        statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+        statusItem = NSStatusBar.system.statusItem(withLength: -2)
         statusItem.highlightMode = true
         statusItem.image = iconOff
-        statusItem.action = "togglePowerAssertion"
+        statusItem.action = #selector(AppDelegate.togglePowerAssertion)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
     }
 
-    func togglePowerAssertion() {
+    @objc func togglePowerAssertion() {
         if statusItem.image == iconOff {
             // Grab power assertion
             powerAssertion = PowerAssertion(named: "Brewing Green Tea")
