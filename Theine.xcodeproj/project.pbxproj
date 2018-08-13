@@ -56,21 +56,13 @@
 			children = (
 				BFA8A0641B3C4B3C00C640A5 /* Theine.entitlements */,
 				BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */,
+				BF7F8A431A6C130200F80CCE /* Info.plist */,
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
 				BF7F8A461A6C130200F80CCE /* Images.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
-				BF7F8A421A6C130200F80CCE /* Supporting Files */,
 			);
 			path = Theine;
-			sourceTree = "<group>";
-		};
-		BF7F8A421A6C130200F80CCE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF7F8A431A6C130200F80CCE /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
