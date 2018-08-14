@@ -37,11 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func togglePowerAssertion() {
         if statusItem.image == iconOff {
-            // Grab power assertion
             powerAssertion = PowerAssertion(named: "Brewing Green Tea")
             statusItem.image = iconOn
         } else {
-            // Release power assertion
             powerAssertion = nil
             statusItem.image = iconOff
         }
