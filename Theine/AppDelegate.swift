@@ -35,9 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.action = #selector(AppDelegate.togglePowerAssertion)
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-    }
-
     @objc func togglePowerAssertion() {
         if statusItem.image == iconOff {
             // Grab power assertion
