@@ -1,6 +1,6 @@
 # Theine
 
-<img align="right" alt="logo" src="Theine/Images.xcassets/AppIcon.appiconset/128x128@2x.png" width="128" height="128">
+<img align="right" alt="logo" src="Theine/Assets.xcassets/AppIcon.appiconset/128x128@2x.png" width="128" height="128">
 
 _Don't let your Mac fall asleep, like a sir_
 

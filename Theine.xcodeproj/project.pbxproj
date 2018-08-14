@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A441A6C130200F80CCE /* AppDelegate.swift */; };
-		BF7F8A471A6C130200F80CCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Images.xcassets */; };
+		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
 		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
 /* End PBXBuildFile section */
@@ -17,7 +17,7 @@
 		BF7F8A3F1A6C130200F80CCE /* Theine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7F8A441A6C130200F80CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF7F8A461A6C130200F80CCE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF7F8A461A6C130200F80CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7F8A491A6C130200F80CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
 		BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Theine-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				BF7F8A431A6C130200F80CCE /* Info.plist */,
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
-				BF7F8A461A6C130200F80CCE /* Images.xcassets */,
+				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
 			path = Theine;
@@ -128,7 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7F8A471A6C130200F80CCE /* Images.xcassets in Resources */,
+				BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */,
 				BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
