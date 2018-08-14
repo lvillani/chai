@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         iconOn = NSImage(named: NSImage.Name(rawValue: "Mug"))
         iconOn.isTemplate = true
 
-        statusItem = NSStatusBar.system.statusItem(withLength: -2)
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         statusItem.highlightMode = true
         statusItem.image = iconOff
         statusItem.action = #selector(AppDelegate.togglePowerAssertion)
