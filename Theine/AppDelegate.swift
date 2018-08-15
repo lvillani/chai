@@ -14,34 +14,79 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    let defaults = Defaults()
+    var powerAssertion: PowerAssertion?
+
     var iconOff: NSImage!
     var iconOn: NSImage!
     var statusItem: NSStatusItem!
-    var powerAssertion: PowerAssertion!
+    var statusMenu: NSMenu!
+    var statusMenuLoginItem: NSMenuItem!
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        iconOff = NSImage(named: NSImage.Name(rawValue: "Mug-Empty"))
+    func applicationDidFinishLaunching(_: Notification) {
+        iconOff = NSImage(named: NSImage.Name("Mug-Empty"))
         iconOff.isTemplate = true
 
-        iconOn = NSImage(named: NSImage.Name(rawValue: "Mug"))
+        iconOn = NSImage(named: NSImage.Name("Mug"))
         iconOn.isTemplate = true
 
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        statusItem.highlightMode = true
+        statusItem.action = #selector(statusItemClicked)
         statusItem.image = iconOff
-        statusItem.action = #selector(AppDelegate.togglePowerAssertion)
+        statusItem.sendAction(on: [.leftMouseUp, .rightMouseUp])
+
+        statusMenuLoginItem = NSMenuItem(title: "Start on login", action: #selector(statusMenuLoginItemClicked), keyEquivalent: "")
+        statusMenuLoginItem.state = defaults.loginItemEnabled ? .on : .off
+
+        statusMenu = NSMenu(title: "Theine")
+        statusMenu.addItem(statusMenuLoginItem)
     }
 
-    @objc func togglePowerAssertion() {
-        if statusItem.image == iconOff {
+    @objc func statusItemClicked() {
+        guard let eventType = NSApp.currentEvent?.type else {
+            return
+        }
+
+        if eventType == .leftMouseUp {
+            togglePowerAssertion()
+        } else if eventType == .rightMouseUp {
+            showMenu()
+        }
+    }
+
+    func togglePowerAssertion() {
+        if statusItem.button?.image == iconOff {
             powerAssertion = PowerAssertion(named: "Brewing Green Tea")
-            statusItem.image = iconOn
+            statusItem.button?.image = iconOn
         } else {
             powerAssertion = nil
-            statusItem.image = iconOff
+            statusItem.button?.image = iconOff
         }
+    }
+
+    func showMenu() {
+        statusItem.menu = statusMenu
+        statusItem.popUpMenu(statusMenu)
+        statusItem.menu = nil
+    }
+
+    @objc func statusMenuLoginItemClicked() {
+        let newState = !defaults.loginItemEnabled
+
+        if !SMLoginItemSetEnabled("me.villani.lorenzo.apple.TheineHelper" as CFString, newState) {
+            let alert = NSAlert()
+            alert.alertStyle = .warning
+            alert.messageText = "Cannot start Theine on login"
+            alert.runModal()
+
+            return
+        }
+
+        statusMenuLoginItem.state = newState ? .on : .off
+        defaults.loginItemEnabled = newState
     }
 }
