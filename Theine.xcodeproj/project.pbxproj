@@ -7,13 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */; };
+		BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF543F522123FE2D0059FA64 /* MainMenu.xib */; };
+		BF543F5B2123FE920059FA64 /* TheineHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = BF543F4C2123FE2C0059FA64 /* TheineHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF543F5F2123FF130059FA64 /* ServiceManagement.framework */; };
+		BF543F63212409600059FA64 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F62212409600059FA64 /* Defaults.swift */; };
 		BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A441A6C130200F80CCE /* AppDelegate.swift */; };
 		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
 		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BF543F5C2123FE9D0059FA64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7F8A371A6C130200F80CCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF543F4B2123FE2C0059FA64;
+			remoteInfo = TheineHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF543F5A2123FE770059FA64 /* Copy Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				BF543F5B2123FE920059FA64 /* TheineHelper.app in Copy Helper */,
+			);
+			name = "Copy Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BF543F4C2123FE2C0059FA64 /* TheineHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheineHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF543F532123FE2D0059FA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BF543F552123FE2D0059FA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF543F562123FE2D0059FA64 /* TheineHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheineHelper.entitlements; sourceTree = "<group>"; };
+		BF543F5F2123FF130059FA64 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		BF543F62212409600059FA64 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		BF7F8A3F1A6C130200F80CCE /* Theine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7F8A441A6C130200F80CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +61,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF543F492123FE2C0059FA64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7F8A3C1A6C130200F80CCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,11 +79,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF543F4D2123FE2D0059FA64 /* TheineHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BF543F562123FE2D0059FA64 /* TheineHelper.entitlements */,
+				BF543F552123FE2D0059FA64 /* Info.plist */,
+				BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */,
+				BF543F522123FE2D0059FA64 /* MainMenu.xib */,
+			);
+			path = TheineHelper;
+			sourceTree = "<group>";
+		};
+		BF543F5E2123FF130059FA64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF543F5F2123FF130059FA64 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF7F8A361A6C130200F80CCE = {
 			isa = PBXGroup;
 			children = (
+				BF543F5E2123FF130059FA64 /* Frameworks */,
 				BF7F8A401A6C130200F80CCE /* Products */,
 				BF7F8A411A6C130200F80CCE /* Theine */,
+				BF543F4D2123FE2D0059FA64 /* TheineHelper */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7F8A3F1A6C130200F80CCE /* Theine.app */,
+				BF543F4C2123FE2C0059FA64 /* TheineHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +124,7 @@
 				BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */,
 				BF7F8A431A6C130200F80CCE /* Info.plist */,
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
+				BF543F62212409600059FA64 /* Defaults.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
@@ -68,6 +135,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BF543F4B2123FE2C0059FA64 /* TheineHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "TheineHelper" */;
+			buildPhases = (
+				BF543F482123FE2C0059FA64 /* Sources */,
+				BF543F492123FE2C0059FA64 /* Frameworks */,
+				BF543F4A2123FE2C0059FA64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheineHelper;
+			productName = TheineHelper;
+			productReference = BF543F4C2123FE2C0059FA64 /* TheineHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BF7F8A3E1A6C130200F80CCE /* Theine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Theine" */;
@@ -75,10 +159,12 @@
 				BF7F8A3B1A6C130200F80CCE /* Sources */,
 				BF7F8A3C1A6C130200F80CCE /* Frameworks */,
 				BF7F8A3D1A6C130200F80CCE /* Resources */,
+				BF543F5A2123FE770059FA64 /* Copy Helper */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */,
 			);
 			name = Theine;
 			productName = Theine;
@@ -91,9 +177,13 @@
 		BF7F8A371A6C130200F80CCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Lorenzo Villani";
 				TargetAttributes = {
+					BF543F4B2123FE2C0059FA64 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					BF7F8A3E1A6C130200F80CCE = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0920;
@@ -119,11 +209,20 @@
 			projectRoot = "";
 			targets = (
 				BF7F8A3E1A6C130200F80CCE /* Theine */,
+				BF543F4B2123FE2C0059FA64 /* TheineHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF543F4A2123FE2C0059FA64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7F8A3D1A6C130200F80CCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,10 +235,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF543F482123FE2C0059FA64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7F8A3B1A6C130200F80CCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF543F63212409600059FA64 /* Defaults.swift in Sources */,
 				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
 				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,
 			);
@@ -147,7 +255,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF543F4B2123FE2C0059FA64 /* TheineHelper */;
+			targetProxy = BF543F5C2123FE9D0059FA64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		BF543F522123FE2D0059FA64 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF543F532123FE2D0059FA64 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		BF7F8A481A6C130200F80CCE /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -159,6 +283,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF543F572123FE2D0059FA64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TheineHelper/TheineHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8CBT3XE9DN;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TheineHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.apple.TheineHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		BF543F582123FE2D0059FA64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TheineHelper/TheineHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 8CBT3XE9DN;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TheineHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.apple.TheineHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		BF7F8A571A6C130200F80CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -311,6 +500,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "TheineHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF543F572123FE2D0059FA64 /* Debug */,
+				BF543F582123FE2D0059FA64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Theine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
