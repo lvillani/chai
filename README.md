@@ -2,8 +2,8 @@
 
 _Don't let your Mac fall asleep, like a sir_
 
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
-[![Semver](http://img.shields.io/badge/version-v1.0.1-blue.svg)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://choosealicense.com/licenses/gpl-3.0/)
+[![Semver](https://img.shields.io/badge/version-v1.0.1-blue.svg)](CHANGELOG.md)
 ![Bugs](https://img.shields.io/badge/bugs-nope-ff69b4.svg)
 
 --------------------------------------------------------------------------------
