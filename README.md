@@ -2,7 +2,7 @@
 
 <img align="right" alt="logo" src="Theine/Assets.xcassets/AppIcon.appiconset/128x128@2x.png" width="128" height="128">
 
-_Don't let your Mac fall asleep, like a sir_
+_Don't let your Mac fall asleep, like a shit_
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://choosealicense.com/licenses/gpl-3.0/)
 [![Semver](https://img.shields.io/badge/version-v1.0.1-blue.svg)](CHANGELOG.md)
