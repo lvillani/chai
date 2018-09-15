@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <circle id="b" cx="449" cy="449" r="449"/>
+    <circle id="h" cx="449" cy="449" r="413"/>
+    <path id="k" d="M712.864 401.364h-22.228v-44.455c0-49.1-79.607-88.909-177.818-88.909C414.607 268 335 307.809 335 356.91v311.18c0 49.101 79.607 88.91 177.818 88.91 98.211 0 177.818-39.809 177.818-88.91v-33.34h22.228c61.37 0 111.136-49.756 111.136-111.136V512.5c0-61.37-49.767-111.136-111.136-111.136zM512.818 423.59c-85.93 0-155.59-29.862-155.59-66.682 0-36.82 69.66-66.682 155.59-66.682S668.41 320.09 668.41 356.91c0 36.82-69.66 66.682-155.59 66.682zm288.955 100.023c0 49.11-39.81 88.909-88.91 88.909h-22.227V423.59h22.228c49.1 0 88.909 39.809 88.909 88.909v11.114z"/>
+    <linearGradient id="gradient-3" gradientUnits="userSpaceOnUse" x1="512" y1="63" x2="512" y2="961">
+      <stop offset="0" style="stop-color: rgb(250, 250, 250);"/>
+      <stop offset="1" style="stop-color: rgb(179, 179, 179);"/>
+    </linearGradient>
+    <linearGradient id="gradient-0" gradientUnits="userSpaceOnUse" x1="512" y1="99" x2="512" y2="925" gradientTransform="matrix(-0.999116, 0.042012, 0, -0.968523, 1011.547363, 974.373878)">
+      <stop offset="0" style="stop-color: rgb(80, 72, 202);"/>
+      <stop offset="1" style="stop-color: rgb(187, 61, 251);"/>
+    </linearGradient>
+    <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="579.5" y1="268" x2="579.5" y2="757" gradientTransform="matrix(-0.999888, 0.014983, 0, -1.002364, 1079.435331, 1018.827539)">
+      <stop offset="0" style="stop-color: rgb(205, 205, 205);"/>
+      <stop offset="1" style="stop-color: rgb(253, 253, 253);"/>
+    </linearGradient>
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="5" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="512" cy="512" r="449" style="fill : url(#gradient-3); pointer-events: none; filter: url(#dropshadow);"/>
+  <circle cx="512" cy="512" r="413" style="fill: url(#gradient-0); pointer-events: none;"/>
+  <path d="M 712.864 401.364 L 690.636 401.364 L 690.636 356.909 C 690.636 307.809 611.029 268 512.818 268 C 414.607 268 335 307.809 335 356.91 L 335 668.09 C 335 717.191 414.607 757 512.818 757 C 611.029 757 690.636 717.191 690.636 668.09 L 690.636 634.75 L 712.864 634.75 C 774.234 634.75 824 584.994 824 523.614 L 824 512.5 C 824 451.13 774.233 401.364 712.864 401.364 Z M 512.818 423.59 C 426.888 423.59 357.228 393.728 357.228 356.908 C 357.228 320.088 426.888 290.226 512.818 290.226 C 598.748 290.226 668.41 320.09 668.41 356.91 C 668.41 393.73 598.75 423.592 512.82 423.592 Z M 801.773 523.613 C 801.773 572.723 761.963 612.522 712.863 612.522 L 690.636 612.522 L 690.636 423.59 L 712.864 423.59 C 761.964 423.59 801.773 463.399 801.773 512.499 L 801.773 523.613 Z" style="pointer-events: none; fill: url(#gradient-1); filter: url(#dropshadow);"/>
+</svg>
