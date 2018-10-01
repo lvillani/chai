@@ -28,10 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusMenuLoginItem: NSMenuItem!
 
     func applicationDidFinishLaunching(_: Notification) {
-        iconOff = NSImage(named: NSImage.Name("Mug-Empty"))
+        iconOff = NSImage(named: "Mug-Empty")
         iconOff.isTemplate = true
 
-        iconOn = NSImage(named: NSImage.Name("Mug"))
+        iconOn = NSImage(named: "Mug")
         iconOn.isTemplate = true
 
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
