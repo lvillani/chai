@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     var statusMenu: NSMenu!
     var statusMenuLoginItem: NSMenuItem!
+    var statusMenuQuitItem: NSMenuItem!
 
     func applicationDidFinishLaunching(_: Notification) {
         iconOff = NSImage(named: "Mug-Empty")
@@ -42,8 +43,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusMenuLoginItem = NSMenuItem(title: "Launch at login", action: #selector(statusMenuLoginItemClicked), keyEquivalent: "")
         statusMenuLoginItem.state = defaults.loginItemEnabled ? .on : .off
 
+        statusMenuQuitItem = NSMenuItem(title: "Quit", action: #selector(statusMenuQuitItemClicked), keyEquivalent: "")
+
         statusMenu = NSMenu(title: "Theine")
         statusMenu.addItem(statusMenuLoginItem)
+        statusMenu.addItem(statusMenuQuitItem)
     }
 
     @objc func statusItemClicked() {
@@ -88,5 +92,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         statusMenuLoginItem.state = newState ? .on : .off
         defaults.loginItemEnabled = newState
+    }
+
+    @objc func statusMenuQuitItemClicked() {
+        NSRunningApplication.current.terminate()
     }
 }
