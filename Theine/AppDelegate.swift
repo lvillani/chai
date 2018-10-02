@@ -19,66 +19,46 @@ import ServiceManagement
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let defaults = Defaults()
+
+    let iconOff = NSImage(imageLiteralResourceName: "Mug-Empty")
+    let iconOn = NSImage(imageLiteralResourceName: "Mug")
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    let statusMenu = NSMenu(title: "Theine")
+
+    let headerItem = NSMenuItem(title: "Keep This Mac Awake", action: nil, keyEquivalent: "")
+
+    let foreverItem = NSMenuItem(title: "Forever", action: #selector(activateAction), keyEquivalent: "a")
+    let launchAtLoginItem = NSMenuItem(title: "Launch at Login", action: #selector(launchAtLoginAction), keyEquivalent: "")
+
     var powerAssertion: PowerAssertion?
 
-    var iconOff: NSImage!
-    var iconOn: NSImage!
-    var statusItem: NSStatusItem!
-    var statusMenu: NSMenu!
-    var statusMenuLoginItem: NSMenuItem!
-    var statusMenuQuitItem: NSMenuItem!
-
     func applicationDidFinishLaunching(_: Notification) {
-        iconOff = NSImage(named: "Mug-Empty")
         iconOff.isTemplate = true
-
-        iconOn = NSImage(named: "Mug")
         iconOn.isTemplate = true
-
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        statusItem.action = #selector(statusItemClicked)
+        headerItem.isEnabled = false
         statusItem.image = iconOff
-        statusItem.sendAction(on: [.leftMouseUp, .rightMouseUp])
+        statusItem.menu = statusMenu
 
-        statusMenuLoginItem = NSMenuItem(title: "Launch at login", action: #selector(statusMenuLoginItemClicked), keyEquivalent: "")
-        statusMenuLoginItem.state = defaults.loginItemEnabled ? .on : .off
-
-        statusMenuQuitItem = NSMenuItem(title: "Quit", action: #selector(statusMenuQuitItemClicked), keyEquivalent: "")
-
-        statusMenu = NSMenu(title: "Theine")
-        statusMenu.addItem(statusMenuLoginItem)
-        statusMenu.addItem(statusMenuQuitItem)
+        statusMenu.addItem(headerItem)
+        statusMenu.addItem(foreverItem)
+        statusMenu.addItem(NSMenuItem.separator())
+        statusMenu.addItem(launchAtLoginItem)
+        statusMenu.addItem(withTitle: "Quit Theine", action: #selector(quitAction), keyEquivalent: "q")
     }
 
-    @objc func statusItemClicked() {
-        guard let eventType = NSApp.currentEvent?.type else {
-            return
-        }
-
-        if eventType == .leftMouseUp {
-            togglePowerAssertion()
-        } else if eventType == .rightMouseUp {
-            showMenu()
-        }
-    }
-
-    func togglePowerAssertion() {
+    @objc func activateAction() {
         if statusItem.button?.image == iconOff {
+            foreverItem.state = .on
             powerAssertion = PowerAssertion(named: "Brewing Green Tea")
             statusItem.button?.image = iconOn
         } else {
+            foreverItem.state = .off
             powerAssertion = nil
             statusItem.button?.image = iconOff
         }
     }
 
-    func showMenu() {
-        statusItem.menu = statusMenu
-        statusItem.popUpMenu(statusMenu)
-        statusItem.menu = nil
-    }
-
-    @objc func statusMenuLoginItemClicked() {
+    @objc func launchAtLoginAction() {
         let newState = !defaults.loginItemEnabled
 
         if !SMLoginItemSetEnabled("me.villani.lorenzo.apple.TheineHelper" as CFString, newState) {
@@ -90,11 +70,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        statusMenuLoginItem.state = newState ? .on : .off
+        launchAtLoginItem.state = newState ? .on : .off
         defaults.loginItemEnabled = newState
     }
 
-    @objc func statusMenuQuitItemClicked() {
+    @objc func quitAction() {
         NSRunningApplication.current.terminate()
     }
 }
