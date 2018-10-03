@@ -1,5 +1,5 @@
 install:
-	xcodebuild
+	xcodebuild | xcpretty
 
 	killall Theine || true
 	rm -rf /Applications/Theine.app
