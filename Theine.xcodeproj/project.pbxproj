@@ -16,6 +16,8 @@
 		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
 		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
+		BFA959B32164A38400B5F7AA /* TEMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA959B22164A38400B5F7AA /* TEMenuItem.swift */; };
+		BFA959B52164A70500B5F7AA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA959B42164A70500B5F7AA /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
 		BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Theine-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFA8A0641B3C4B3C00C640A5 /* Theine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Theine.entitlements; sourceTree = "<group>"; };
+		BFA959B22164A38400B5F7AA /* TEMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEMenuItem.swift; sourceTree = "<group>"; };
+		BFA959B42164A70500B5F7AA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
 				BF543F62212409600059FA64 /* Defaults.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
+				BFA959B42164A70500B5F7AA /* Store.swift */,
+				BFA959B22164A38400B5F7AA /* TEMenuItem.swift */,
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
@@ -248,6 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA959B52164A70500B5F7AA /* Store.swift in Sources */,
+				BFA959B32164A38400B5F7AA /* TEMenuItem.swift in Sources */,
 				BF543F63212409600059FA64 /* Defaults.swift in Sources */,
 				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
 				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,
@@ -392,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -438,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
