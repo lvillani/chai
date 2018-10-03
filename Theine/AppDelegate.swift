@@ -105,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         updateUi()
-        
+
         os_log("Activated")
     }
 
@@ -151,7 +151,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        os_log("Launch at login: %s", newState ? "enabled" : "disabled")
+        os_log("Launch at login: %{public}s", newState ? "enabled" : "disabled")
         launchAtLoginItem.state = newState ? .on : .off
         defaults.loginItemEnabled = newState
     }
