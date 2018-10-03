@@ -137,6 +137,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             statusItem.image = iconOff
         }
+
+        launchAtLoginItem.state = defaults.loginItemEnabled ? .on : .off
     }
 
     @objc func launchAtLoginAction() {
@@ -152,8 +154,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         os_log("Launch at login: %{public}s", newState ? "enabled" : "disabled")
-        launchAtLoginItem.state = newState ? .on : .off
         defaults.loginItemEnabled = newState
+
+        updateUi()
     }
 
     @objc func quitAction() {
