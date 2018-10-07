@@ -22,6 +22,7 @@ let oneHour = TimeInterval(3600) // Seconds
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     // Globals
+    static let appName = Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
     let defaults = Defaults()
     let store = Store()
 
@@ -32,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let iconOff = NSImage(imageLiteralResourceName: "Mug-Empty")
     let iconOn = NSImage(imageLiteralResourceName: "Mug")
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-    let statusMenu = NSMenu(title: "Theine")
+    let statusMenu = NSMenu(title: appName)
 
     let headerItem = NSMenuItem(title: "Keep This Mac Awake", action: nil, keyEquivalent: "")
     let launchAtLoginItem = NSMenuItem(title: "Launch at Login", action: #selector(launchAtLoginAction), keyEquivalent: "")
@@ -66,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(launchAtLoginItem)
-        statusMenu.addItem(withTitle: "Quit Theine", action: #selector(quitAction), keyEquivalent: "q")
+        statusMenu.addItem(withTitle: "Quit \(AppDelegate.appName)", action: #selector(quitAction), keyEquivalent: "q")
 
         updateUi()
     }
