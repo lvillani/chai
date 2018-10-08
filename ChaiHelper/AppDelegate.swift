@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_: Notification) {
         // Find whether parent application is running
         let isRunning = NSWorkspace.shared.runningApplications.contains {
-            $0.bundleIdentifier == "me.villani.lorenzo.apple.Theine"
+            $0.bundleIdentifier == "me.villani.lorenzo.Chai"
         }
 
         if isRunning {

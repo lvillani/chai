@@ -145,7 +145,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func launchAtLoginAction() {
         let newState = !defaults.loginItemEnabled
 
-        if !SMLoginItemSetEnabled("me.villani.lorenzo.apple.TheineHelper" as CFString, newState) {
+        if !SMLoginItemSetEnabled("me.villani.lorenzo.ChaiHelper" as CFString, newState) {
             let alert = NSAlert()
             alert.alertStyle = .warning
             alert.messageText = "Cannot start Theine on login"

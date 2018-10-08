@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */; };
 		BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF543F522123FE2D0059FA64 /* MainMenu.xib */; };
-		BF543F5B2123FE920059FA64 /* TheineHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = BF543F4C2123FE2C0059FA64 /* TheineHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF543F5B2123FE920059FA64 /* ChaiHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF543F5F2123FF130059FA64 /* ServiceManagement.framework */; };
 		BF543F63212409600059FA64 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F62212409600059FA64 /* Defaults.swift */; };
 		BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A441A6C130200F80CCE /* AppDelegate.swift */; };
@@ -37,7 +37,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				BF543F5B2123FE920059FA64 /* TheineHelper.app in Copy Helper */,
+				BF543F5B2123FE920059FA64 /* ChaiHelper.app in Copy Helper */,
 			);
 			name = "Copy Helper";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,21 +45,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF543F4C2123FE2C0059FA64 /* TheineHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheineHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaiHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF543F532123FE2D0059FA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BF543F552123FE2D0059FA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF543F562123FE2D0059FA64 /* TheineHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheineHelper.entitlements; sourceTree = "<group>"; };
+		BF543F562123FE2D0059FA64 /* ChaiHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChaiHelper.entitlements; sourceTree = "<group>"; };
 		BF543F5F2123FF130059FA64 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		BF543F62212409600059FA64 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		BF7F8A3F1A6C130200F80CCE /* Theine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7F8A3F1A6C130200F80CCE /* Chai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7F8A441A6C130200F80CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7F8A461A6C130200F80CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7F8A491A6C130200F80CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
-		BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Theine-Bridging-Header.h"; sourceTree = "<group>"; };
-		BFA8A0641B3C4B3C00C640A5 /* Theine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Theine.entitlements; sourceTree = "<group>"; };
+		BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chai-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chai.entitlements; sourceTree = "<group>"; };
 		BFA959B22164A38400B5F7AA /* TEMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEMenuItem.swift; sourceTree = "<group>"; };
 		BFA959B42164A70500B5F7AA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,15 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF543F4D2123FE2D0059FA64 /* TheineHelper */ = {
+		BF543F4D2123FE2D0059FA64 /* ChaiHelper */ = {
 			isa = PBXGroup;
 			children = (
-				BF543F562123FE2D0059FA64 /* TheineHelper.entitlements */,
+				BF543F562123FE2D0059FA64 /* ChaiHelper.entitlements */,
 				BF543F552123FE2D0059FA64 /* Info.plist */,
 				BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */,
 				BF543F522123FE2D0059FA64 /* MainMenu.xib */,
 			);
-			path = TheineHelper;
+			path = ChaiHelper;
 			sourceTree = "<group>";
 		};
 		BF543F5E2123FF130059FA64 /* Frameworks */ = {
@@ -105,27 +105,27 @@
 		BF7F8A361A6C130200F80CCE = {
 			isa = PBXGroup;
 			children = (
+				BF7F8A411A6C130200F80CCE /* Chai */,
+				BF543F4D2123FE2D0059FA64 /* ChaiHelper */,
 				BF543F5E2123FF130059FA64 /* Frameworks */,
 				BF7F8A401A6C130200F80CCE /* Products */,
-				BF7F8A411A6C130200F80CCE /* Theine */,
-				BF543F4D2123FE2D0059FA64 /* TheineHelper */,
 			);
 			sourceTree = "<group>";
 		};
 		BF7F8A401A6C130200F80CCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF7F8A3F1A6C130200F80CCE /* Theine.app */,
-				BF543F4C2123FE2C0059FA64 /* TheineHelper.app */,
+				BF7F8A3F1A6C130200F80CCE /* Chai.app */,
+				BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF7F8A411A6C130200F80CCE /* Theine */ = {
+		BF7F8A411A6C130200F80CCE /* Chai */ = {
 			isa = PBXGroup;
 			children = (
-				BFA8A0641B3C4B3C00C640A5 /* Theine.entitlements */,
-				BF7F8A631A6C137300F80CCE /* Theine-Bridging-Header.h */,
+				BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */,
+				BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */,
 				BF7F8A431A6C130200F80CCE /* Info.plist */,
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
 				BF543F62212409600059FA64 /* Defaults.swift */,
@@ -135,15 +135,15 @@
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
-			path = Theine;
+			path = Chai;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF543F4B2123FE2C0059FA64 /* TheineHelper */ = {
+		BF543F4B2123FE2C0059FA64 /* ChaiHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "TheineHelper" */;
+			buildConfigurationList = BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "ChaiHelper" */;
 			buildPhases = (
 				BF543F482123FE2C0059FA64 /* Sources */,
 				BF543F492123FE2C0059FA64 /* Frameworks */,
@@ -153,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = TheineHelper;
+			name = ChaiHelper;
 			productName = TheineHelper;
-			productReference = BF543F4C2123FE2C0059FA64 /* TheineHelper.app */;
+			productReference = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF7F8A3E1A6C130200F80CCE /* Theine */ = {
+		BF7F8A3E1A6C130200F80CCE /* Chai */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Theine" */;
+			buildConfigurationList = BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Chai" */;
 			buildPhases = (
 				BF7F8A3B1A6C130200F80CCE /* Sources */,
 				BF7F8A3C1A6C130200F80CCE /* Frameworks */,
@@ -172,9 +172,9 @@
 			dependencies = (
 				BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */,
 			);
-			name = Theine;
+			name = Chai;
 			productName = Theine;
-			productReference = BF7F8A3F1A6C130200F80CCE /* Theine.app */;
+			productReference = BF7F8A3F1A6C130200F80CCE /* Chai.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -202,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Theine" */;
+			buildConfigurationList = BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Chai" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -215,8 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF7F8A3E1A6C130200F80CCE /* Theine */,
-				BF543F4B2123FE2C0059FA64 /* TheineHelper */,
+				BF7F8A3E1A6C130200F80CCE /* Chai */,
+				BF543F4B2123FE2C0059FA64 /* ChaiHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +267,7 @@
 /* Begin PBXTargetDependency section */
 		BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF543F4B2123FE2C0059FA64 /* TheineHelper */;
+			target = BF543F4B2123FE2C0059FA64 /* ChaiHelper */;
 			targetProxy = BF543F5C2123FE9D0059FA64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -304,19 +304,19 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = TheineHelper/TheineHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ChaiHelper/ChaiHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 8CBT3XE9DN;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = TheineHelper/Info.plist;
+				INFOPLIST_FILE = ChaiHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.apple.TheineHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -336,19 +336,19 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = TheineHelper/TheineHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ChaiHelper/ChaiHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 8CBT3XE9DN;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = TheineHelper/Info.plist;
+				INFOPLIST_FILE = ChaiHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.apple.TheineHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -401,7 +401,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = Theine;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -447,7 +447,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Theine;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -460,21 +460,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = Theine/Theine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Chai/Chai.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8CBT3XE9DN;
-				INFOPLIST_FILE = Theine/Info.plist;
+				INFOPLIST_FILE = Chai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.villani.lorenzo.apple.$(TARGET_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.Chai;
+				PRODUCT_NAME = Chai;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OBJC_BRIDGING_HEADER = "Theine/Theine-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chai/Chai-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -486,20 +486,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = Theine/Theine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Chai/Chai.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8CBT3XE9DN;
-				INFOPLIST_FILE = Theine/Info.plist;
+				INFOPLIST_FILE = Chai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.villani.lorenzo.apple.$(TARGET_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.Chai;
+				PRODUCT_NAME = Chai;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Theine/Theine-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chai/Chai-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -507,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "TheineHelper" */ = {
+		BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "ChaiHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF543F572123FE2D0059FA64 /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Theine" */ = {
+		BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Chai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7F8A571A6C130200F80CCE /* Debug */,
@@ -525,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Theine" */ = {
+		BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Chai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7F8A5A1A6C130200F80CCE /* Debug */,

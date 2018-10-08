@@ -1,6 +1,6 @@
-# Theine
+# Chai
 
-<img align="right" alt="logo" src="Theine/Assets.xcassets/AppIcon.appiconset/128x128@2x.png" width="128" height="128">
+<img align="right" alt="logo" src="Chai/Assets.xcassets/AppIcon.appiconset/128x128@2x.png" width="128" height="128">
 
 _Don't let your Mac fall asleep, like a sir_
 
@@ -11,10 +11,6 @@ _Don't let your Mac fall asleep, like a sir_
 --------------------------------------------------------------------------------
 
 ![Screenshot](screenshot.jpg)
-
-## Installation
-
-    brew cask install theine
 
 ## Don't We Have Caffeine Already?
 

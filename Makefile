@@ -1,8 +1,8 @@
 install:
 	xcodebuild | xcpretty
 
-	killall Theine || true
-	rm -rf /Applications/Theine.app
-	cp -r build/Release/Theine.app /Applications
+	killall Chai || true
+	rm -rf /Applications/Chai.app
+	cp -r build/Release/Chai.app /Applications
 
 .PHONY: install
