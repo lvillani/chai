@@ -96,7 +96,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         store.active = true
         store.activeItem = sender
 
-        powerAssertion = PowerAssertion(named: "Brewing Green Tea")
+        powerAssertion = PowerAssertion(named: "Brewing Tea")
 
         if sender.timerDuration > 0 {
             os_log("Scheduling deactivation in %f seconds", sender.timerDuration)
