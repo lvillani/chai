@@ -1,4 +1,4 @@
-// Theine - Don't let your Mac fall asleep, like a sir
+// Chai - Don't let your Mac fall asleep, like a sir
 // Copyright (C) 2018 Lorenzo Villani
 //
 // This program is free software: you can redistribute it and/or modify

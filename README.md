@@ -10,11 +10,19 @@ _Don't let your Mac fall asleep, like a sir_
 
 --------------------------------------------------------------------------------
 
-![Screenshot](screenshot.jpg)
+## Installation
+
+### Homebrew
+
+    brew cask install chai
+
+## How Does It Look Like?
+
+<img src="screenshot.jpg" width="640" height="400">
 
 ## Don't We Have Caffeine Already?
 
-Theine is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
+Chai is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
 * It's open source, we have nothing to hide.
 * The monochrome icon adapts nicely to light and dark themes. It's ready for Mojave.

@@ -1,4 +1,4 @@
-// Theine - Don't let your Mac fall asleep, like a sir
+// Chai - Don't let your Mac fall asleep, like a sir
 // Copyright (C) 2018 Lorenzo Villani
 //
 // This program is free software: you can redistribute it and/or modify
@@ -148,7 +148,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if !SMLoginItemSetEnabled("me.villani.lorenzo.ChaiHelper" as CFString, newState) {
             let alert = NSAlert()
             alert.alertStyle = .warning
-            alert.messageText = "Cannot start Theine on login"
+            alert.messageText = "Cannot start Chai on login"
             alert.runModal()
 
             return

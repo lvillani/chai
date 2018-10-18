@@ -26,7 +26,7 @@
 			containerPortal = BF7F8A371A6C130200F80CCE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF543F4B2123FE2C0059FA64;
-			remoteInfo = TheineHelper;
+			remoteInfo = ChaiHelper;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -154,7 +154,7 @@
 			dependencies = (
 			);
 			name = ChaiHelper;
-			productName = TheineHelper;
+			productName = ChaiHelper;
 			productReference = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -173,7 +173,7 @@
 				BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */,
 			);
 			name = Chai;
-			productName = Theine;
+			productName = Chai;
 			productReference = BF7F8A3F1A6C130200F80CCE /* Chai.app */;
 			productType = "com.apple.product-type.application";
 		};
