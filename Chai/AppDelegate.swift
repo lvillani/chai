@@ -36,6 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     let headerItem = NSMenuItem(title: "Keep This Mac Awake", action: nil, keyEquivalent: "")
     let launchAtLoginItem = NSMenuItem(title: "Launch at Login", action: #selector(launchAtLoginAction), keyEquivalent: "")
 
+    let preferences = NSMenuItem(title: "Preferences", action: nil, keyEquivalent: "")
+    let disableAfterSuspend = NSMenuItem(title: "Disable After Suspend", action: #selector(disableAfterSuspendAction), keyEquivalent: "")
+
     // Activation timers
     let activationSpecs: [(String, TimeInterval, String)] = [
         ("Forever", 0, "0"),
@@ -55,6 +58,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     func applicationDidFinishLaunching(_: Notification) {
         initUi()
 
+        registerDidWakeNotification()
+
         globalStore.dispatch(action: .initialize)
         globalStore.subscribe(storeDelegate: self)
     }
@@ -67,9 +72,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
         statusItem.menu = statusMenu
 
+        // Timers
         statusMenu.addItem(headerItem)
         initMenuItems()
 
+        // Preferences
+        preferences.submenu = NSMenu(title: "Preferences")
+        preferences.submenu?.addItem(disableAfterSuspend)
+
+        statusMenu.addItem(NSMenuItem.separator())
+        statusMenu.addItem(preferences)
+
+        // Global
         statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(launchAtLoginItem)
         statusMenu.addItem(withTitle: "Quit \(AppDelegate.appName)", action: #selector(quitAction), keyEquivalent: "q")
@@ -83,6 +97,44 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
             activationItems.append(item)
             statusMenu.addItem(item)
         }
+    }
+
+    func registerDidWakeNotification() {
+        os_log("Registering system wakeup notification handler")
+
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(receiveDidWakeNotification),
+            name: NSWorkspace.didWakeNotification,
+            object: nil
+        )
+    }
+
+    @objc func receiveDidWakeNotification() {
+        if !globalStore.state.isDisableAfterSuspendEnabled {
+            return
+        }
+
+        os_log("System wakeup detected, disabling according to config")
+        deactivate()
+    }
+
+    func stateChanged(state: State) {
+        // Icon
+        statusItem.image = state.active ? iconOn : iconOff
+
+        // Timers
+        for item in activationItems {
+            item.state = .off
+        }
+
+        state.activeItem?.state = .on
+
+        // Disable after suspend
+        disableAfterSuspend.state = state.isDisableAfterSuspendEnabled ? .on : .off
+
+        // Login Item
+        launchAtLoginItem.state = state.isLoginItemEnabled ? .on : .off
     }
 
     @objc func activateAction(sender: TEMenuItem) {
@@ -123,19 +175,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
         os_log("Deactivated")
     }
 
-    func stateChanged(state: State) {
-        // Icon
-        statusItem.image = state.active ? iconOn : iconOff
-
-        // Timers
-        for item in activationItems {
-            item.state = .off
-        }
-
-        state.activeItem?.state = .on
-
-        // Login Item
-        launchAtLoginItem.state = state.isLoginItemEnabled ? .on : .off
+    @objc func disableAfterSuspendAction() {
+        globalStore.dispatch(action: .setDisableAfterSuspendEnabled(!globalStore.state.isDisableAfterSuspendEnabled))
     }
 
     @objc func launchAtLoginAction() {

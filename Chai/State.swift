@@ -23,20 +23,25 @@ enum Action {
     case initialize
     case activate(TEMenuItem?)
     case deactivate
+    case setDisableAfterSuspendEnabled(Bool)
     case setLoginItemEnabled(Bool)
 }
 
 struct State {
     var active: Bool = false
     var activeItem: TEMenuItem? = nil
+    var isDisableAfterSuspendEnabled: Bool = false
     var isLoginItemEnabled: Bool = false
 }
 
 func appReducer(state: State, action: Action) -> State {
     switch action {
     case .initialize:
+        let defaults = Defaults()
+
         var state = State()
-        state.isLoginItemEnabled = Defaults().isLoginItemEnabled
+        state.isDisableAfterSuspendEnabled = defaults.isDisableAfterSuspendEnabled
+        state.isLoginItemEnabled = defaults.isLoginItemEnabled
         return state
     case .activate(let item):
         var newState = state
@@ -48,8 +53,15 @@ func appReducer(state: State, action: Action) -> State {
         newState.active = false
         newState.activeItem = nil
         return newState
+    case .setDisableAfterSuspendEnabled(let enabled):
+        Defaults().isDisableAfterSuspendEnabled = enabled
+
+        var newState = state
+        newState.isDisableAfterSuspendEnabled = enabled
+        return newState
     case .setLoginItemEnabled(let enabled):
         Defaults().isLoginItemEnabled = enabled
+
         var newState = state
         newState.isLoginItemEnabled = enabled
         return newState
