@@ -19,7 +19,7 @@ class Defaults {
     private let keyLoginItemEnabled = "LoginItemEnabled"
     private let userDefaults = UserDefaults()
 
-    var loginItemEnabled: Bool {
+    var isLoginItemEnabled: Bool {
         get {
             return userDefaults.bool(forKey: keyLoginItemEnabled)
         }

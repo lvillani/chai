@@ -20,11 +20,9 @@ import os
 let oneHour = TimeInterval(3600) // Seconds
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     // Globals
     static let appName = Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
-    let defaults = Defaults()
-    let store = Store()
 
     var powerAssertion: PowerAssertion?
     var timer: Timer?
@@ -50,8 +48,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var activationItems: [TEMenuItem] = []
 
+    func applicationWillTerminate(_ notification: Notification) {
+        globalStore.unsubscribe(storeDelegate: self)
+    }
+
     func applicationDidFinishLaunching(_: Notification) {
         initUi()
+
+        globalStore.dispatch(action: .initialize)
+        globalStore.subscribe(storeDelegate: self)
     }
 
     func initUi() {
@@ -68,8 +73,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(launchAtLoginItem)
         statusMenu.addItem(withTitle: "Quit \(AppDelegate.appName)", action: #selector(quitAction), keyEquivalent: "q")
-
-        updateUi()
     }
 
     func initMenuItems() {
@@ -83,8 +86,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func activateAction(sender: TEMenuItem) {
-        var newActivationState = !store.active
-        if store.activeItem != sender {
+        var newActivationState = !globalStore.state.active
+        if globalStore.state.activeItem != sender {
             newActivationState = true
         }
 
@@ -92,9 +95,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if !newActivationState {
             return
         }
-
-        store.active = true
-        store.activeItem = sender
 
         powerAssertion = PowerAssertion(named: "Brewing Tea")
 
@@ -105,8 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             })
         }
 
-        updateUi()
-
+        globalStore.dispatch(action: .activate(sender))
         os_log("Activated")
     }
 
@@ -120,30 +119,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             timer = nil
         }
 
-        store.active = false
-        store.activeItem = nil
-        updateUi()
-
+        globalStore.dispatch(action: .deactivate)
         os_log("Deactivated")
     }
 
-    func updateUi() {
+    func stateChanged(state: State) {
+        // Icon
+        statusItem.image = state.active ? iconOn : iconOff
+
+        // Timers
         for item in activationItems {
             item.state = .off
         }
 
-        if store.active {
-            statusItem.image = iconOn
-            store.activeItem?.state = .on
-        } else {
-            statusItem.image = iconOff
-        }
+        state.activeItem?.state = .on
 
-        launchAtLoginItem.state = defaults.loginItemEnabled ? .on : .off
+        // Login Item
+        launchAtLoginItem.state = state.isLoginItemEnabled ? .on : .off
     }
 
     @objc func launchAtLoginAction() {
-        let newState = !defaults.loginItemEnabled
+        let newState = !globalStore.state.isLoginItemEnabled
 
         if !SMLoginItemSetEnabled("me.villani.lorenzo.ChaiHelper" as CFString, newState) {
             let alert = NSAlert()
@@ -154,10 +150,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
+        globalStore.dispatch(action: .setLoginItemEnabled(newState))
         os_log("Launch at login: %{public}s", newState ? "enabled" : "disabled")
-        defaults.loginItemEnabled = newState
-
-        updateUi()
     }
 
     @objc func quitAction() {
