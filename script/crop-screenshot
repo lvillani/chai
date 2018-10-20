@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd "$(dirname "${0}")/../"
+
+gm mogrify -crop 1280x800+1280 *.png
