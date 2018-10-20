@@ -18,7 +18,7 @@ _Don't let your Mac fall asleep, like a sir_
 
 ## How Does It Look Like?
 
-<img src="screenshot.jpg" width="640" height="400">
+<img src="screenshot.png" width="640" height="400">
 
 ## Don't We Have Caffeine Already?
 
