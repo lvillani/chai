@@ -70,7 +70,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
         headerItem.isEnabled = false
 
-        statusItem.menu = statusMenu
+        statusItem.action = #selector(statusItemClicked)
+        statusItem.sendAction(on: [.leftMouseUp, .rightMouseDown])
 
         // Timers
         statusMenu.addItem(headerItem)
@@ -87,6 +88,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
         statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(launchAtLoginItem)
         statusMenu.addItem(withTitle: "Quit \(AppDelegate.appName)", action: #selector(quitAction), keyEquivalent: "q")
+    }
+
+    @objc func statusItemClicked() {
+        guard let eventType = NSApp.currentEvent?.type else {
+            return
+        }
+
+        if eventType == .leftMouseUp {
+            // HACK: item at 1 is
+            activateAction(sender: statusMenu.item(at: 1) as! TEMenuItem)
+        } else if eventType == .rightMouseDown {
+            // HACK: This allows showing the menu on right click.
+            statusItem.menu = statusMenu
+            statusItem.button?.performClick(nil)
+            statusItem.menu = nil // NOTE: Must set to nil to be able to handle left clicks again
+        }
     }
 
     func initMenuItems() {
