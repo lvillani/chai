@@ -16,27 +16,27 @@
 import Foundation
 
 class Defaults {
-    private let keyDisableAfterSuspend = "DisableAfterSuspend"
-    private let keyLoginItemEnabled = "LoginItemEnabled"
-    private let userDefaults = UserDefaults()
+  private let keyDisableAfterSuspend = "DisableAfterSuspend"
+  private let keyLoginItemEnabled = "LoginItemEnabled"
+  private let userDefaults = UserDefaults()
 
-    var isDisableAfterSuspendEnabled: Bool {
-        get {
-            return userDefaults.bool(forKey: keyDisableAfterSuspend)
-        }
-
-        set {
-            userDefaults.set(newValue, forKey: keyDisableAfterSuspend)
-        }
+  var isDisableAfterSuspendEnabled: Bool {
+    get {
+      return userDefaults.bool(forKey: keyDisableAfterSuspend)
     }
 
-    var isLoginItemEnabled: Bool {
-        get {
-            return userDefaults.bool(forKey: keyLoginItemEnabled)
-        }
-
-        set {
-            userDefaults.set(newValue, forKey: keyLoginItemEnabled)
-        }
+    set {
+      userDefaults.set(newValue, forKey: keyDisableAfterSuspend)
     }
+  }
+
+  var isLoginItemEnabled: Bool {
+    get {
+      return userDefaults.bool(forKey: keyLoginItemEnabled)
+    }
+
+    set {
+      userDefaults.set(newValue, forKey: keyLoginItemEnabled)
+    }
+  }
 }

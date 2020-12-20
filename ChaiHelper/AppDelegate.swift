@@ -18,24 +18,24 @@ import os
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    func applicationDidFinishLaunching(_: Notification) {
-        // Find whether parent application is running
-        let isRunning = NSWorkspace.shared.runningApplications.contains {
-            $0.bundleIdentifier == "me.villani.lorenzo.Chai"
-        }
-
-        if isRunning {
-            os_log("Parent application already running")
-            return
-        }
-
-        // Launch parent application
-        os_log("Launching parent application")
-
-        let bundlePath = NSString(string: Bundle.main.bundlePath).pathComponents
-        let parentPath = Array(bundlePath[..<(bundlePath.count - 4)])
-
-        NSWorkspace.shared.launchApplication(NSString.path(withComponents: parentPath))
-        NSRunningApplication.current.terminate()
+  func applicationDidFinishLaunching(_: Notification) {
+    // Find whether parent application is running
+    let isRunning = NSWorkspace.shared.runningApplications.contains {
+      $0.bundleIdentifier == "me.villani.lorenzo.Chai"
     }
+
+    if isRunning {
+      os_log("Parent application already running")
+      return
+    }
+
+    // Launch parent application
+    os_log("Launching parent application")
+
+    let bundlePath = NSString(string: Bundle.main.bundlePath).pathComponents
+    let parentPath = Array(bundlePath[..<(bundlePath.count - 4)])
+
+    NSWorkspace.shared.launchApplication(NSString.path(withComponents: parentPath))
+    NSRunningApplication.current.terminate()
+  }
 }

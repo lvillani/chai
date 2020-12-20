@@ -16,13 +16,13 @@
 import Cocoa
 
 class TEMenuItem: NSMenuItem {
-    var timerDuration: TimeInterval = 0
+  var timerDuration: TimeInterval = 0
 
-    required init(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-    }
+  required init(coder decoder: NSCoder) {
+    super.init(coder: decoder)
+  }
 
-    override init(title string: String, action selector: Selector?, keyEquivalent charCode: String) {
-        super.init(title: string, action: selector, keyEquivalent: charCode)
-    }
+  override init(title string: String, action selector: Selector?, keyEquivalent charCode: String) {
+    super.init(title: string, action: selector, keyEquivalent: charCode)
+  }
 }

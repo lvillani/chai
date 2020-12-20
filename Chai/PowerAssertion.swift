@@ -18,32 +18,34 @@ import IOKit
 
 // This is seemingly not exposed to Swift
 enum Assertion: String {
-    case NoDisplaySleep = "NoDisplaySleepAssertion"
+  case NoDisplaySleep = "NoDisplaySleepAssertion"
 }
 
 // This is seemingly not exposed to Swift
 enum AssertionLevel: UInt32 {
-    case off = 0
-    case on = 255
+  case off = 0
+  case on = 255
 }
 
 class PowerAssertion {
-    var assertion: IOPMAssertionID = 0
+  var assertion: IOPMAssertionID = 0
 
-    init(named name: String) {
-        let ret = IOPMAssertionCreateWithName(Assertion.NoDisplaySleep.rawValue as CFString, AssertionLevel.on.rawValue, name as CFString, &assertion)
+  init(named name: String) {
+    let ret = IOPMAssertionCreateWithName(
+      Assertion.NoDisplaySleep.rawValue as CFString, AssertionLevel.on.rawValue, name as CFString,
+      &assertion)
 
-        // FIXME: Make this a fallible initializer
-        if ret != kIOReturnSuccess {
-            NSLog("Oops: Couldn't grab the power assertion")
-        }
+    // FIXME: Make this a fallible initializer
+    if ret != kIOReturnSuccess {
+      NSLog("Oops: Couldn't grab the power assertion")
     }
+  }
 
-    deinit {
-        let ret = IOPMAssertionRelease(assertion)
+  deinit {
+    let ret = IOPMAssertionRelease(assertion)
 
-        if ret != kIOReturnSuccess {
-            NSLog("Oops: Couldn't release the power assertion")
-        }
+    if ret != kIOReturnSuccess {
+      NSLog("Oops: Couldn't release the power assertion")
     }
+  }
 }

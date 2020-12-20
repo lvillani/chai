@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+cd "$(dirname "${0}")/../"
+
+git ls-files -z '*.swift' | xargs -0 swift-format format -i
