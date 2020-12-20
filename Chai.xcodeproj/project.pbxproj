@@ -17,7 +17,7 @@
 		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
 		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
-		BFA959B32164A38400B5F7AA /* TEMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA959B22164A38400B5F7AA /* TEMenuItem.swift */; };
+		BFA959B32164A38400B5F7AA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA959B22164A38400B5F7AA /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
 		BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chai-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chai.entitlements; sourceTree = "<group>"; };
-		BFA959B22164A38400B5F7AA /* TEMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEMenuItem.swift; sourceTree = "<group>"; };
+		BFA959B22164A38400B5F7AA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 				BF543F62212409600059FA64 /* Defaults.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
 				BF156ACE217B24FD00554D25 /* State.swift */,
-				BFA959B22164A38400B5F7AA /* TEMenuItem.swift */,
+				BFA959B22164A38400B5F7AA /* MenuItem.swift */,
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
@@ -254,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA959B32164A38400B5F7AA /* TEMenuItem.swift in Sources */,
+				BFA959B32164A38400B5F7AA /* MenuItem.swift in Sources */,
 				BF543F63212409600059FA64 /* Defaults.swift in Sources */,
 				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
 				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,

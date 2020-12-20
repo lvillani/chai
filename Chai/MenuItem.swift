@@ -15,7 +15,7 @@
 
 import Cocoa
 
-class TEMenuItem: NSMenuItem {
+class MenuItem: NSMenuItem {
   var timerDuration: TimeInterval = 0
 
   required init(coder decoder: NSCoder) {

@@ -21,7 +21,7 @@ import Dispatch
 
 enum Action {
   case initialize
-  case activate(TEMenuItem?)
+  case activate(MenuItem?)
   case deactivate
   case setDisableAfterSuspendEnabled(Bool)
   case setLoginItemEnabled(Bool)
@@ -29,7 +29,7 @@ enum Action {
 
 struct State {
   var active: Bool = false
-  var activeItem: TEMenuItem? = nil
+  var activeItem: MenuItem? = nil
   var isDisableAfterSuspendEnabled: Bool = false
   var isLoginItemEnabled: Bool = false
 }

@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     ("8 Hours", 8 * oneHour, "8"),
   ]
 
-  var activationItems: [TEMenuItem] = []
+  var activationItems: [MenuItem] = []
 
   func applicationWillTerminate(_ notification: Notification) {
     globalStore.unsubscribe(storeDelegate: self)
@@ -101,7 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
     if eventType == .leftMouseUp {
       // HACK: item at 1 is
-      activateAction(sender: statusMenu.item(at: 1) as! TEMenuItem)
+      activateAction(sender: statusMenu.item(at: 1) as! MenuItem)
     } else if eventType == .rightMouseDown {
       // HACK: This allows showing the menu on right click.
       statusItem.menu = statusMenu
@@ -112,7 +112,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
   func initMenuItems() {
     for itemSpec in activationSpecs {
-      let item = TEMenuItem(
+      let item = MenuItem(
         title: itemSpec.0, action: #selector(activateAction(sender:)), keyEquivalent: itemSpec.2)
       item.timerDuration = itemSpec.1
 
@@ -159,7 +159,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     launchAtLoginItem.state = state.isLoginItemEnabled ? .on : .off
   }
 
-  @objc func activateAction(sender: TEMenuItem) {
+  @objc func activateAction(sender: MenuItem) {
     var newActivationState = !globalStore.state.active
     if globalStore.state.activeItem != sender {
       newActivationState = true
