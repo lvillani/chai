@@ -18,6 +18,8 @@ import Foundation
 class Defaults {
   private let keyDisableAfterSuspend = "DisableAfterSuspend"
   private let keyLoginItemEnabled = "LoginItemEnabled"
+  private let keyIsEnabledByDefault = "IsEnabledByDefault"
+  private let keyLastSession = "LastSession"
   private let userDefaults = UserDefaults()
 
   var isDisableAfterSuspendEnabled: Bool {
@@ -37,6 +39,26 @@ class Defaults {
 
     set {
       userDefaults.set(newValue, forKey: keyLoginItemEnabled)
+    }
+  }
+
+  var isEnabledByDefault: Bool {
+    get {
+      return userDefaults.bool(forKey: keyIsEnabledByDefault)
+    }
+
+    set {
+      userDefaults.set(newValue, forKey: keyIsEnabledByDefault)
+    }
+  }
+
+  var lastSession: String? {
+    get {
+      return userDefaults.string(forKey: keyLastSession)
+    }
+
+    set {
+      userDefaults.set(newValue, forKey: keyLastSession)
     }
   }
 }

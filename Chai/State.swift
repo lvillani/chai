@@ -21,17 +21,20 @@ import Dispatch
 
 enum Action {
   case initialize
-  case activate(MenuItem?)
+  case activate(String?)
   case deactivate
   case setDisableAfterSuspendEnabled(Bool)
   case setLoginItemEnabled(Bool)
+  case setIsEnabledByDefault(Bool)
 }
 
 struct State {
   var active: Bool = false
-  var activeItem: MenuItem? = nil
+  var activeItem: ActivationSpec? = nil
   var isDisableAfterSuspendEnabled: Bool = false
   var isLoginItemEnabled: Bool = false
+  var isEnabledByDefault: Bool = false
+  var lastSession: String? = nil
 }
 
 func appReducer(state: State, action: Action) -> State {
@@ -42,16 +45,30 @@ func appReducer(state: State, action: Action) -> State {
     var state = State()
     state.isDisableAfterSuspendEnabled = defaults.isDisableAfterSuspendEnabled
     state.isLoginItemEnabled = defaults.isLoginItemEnabled
+    state.isEnabledByDefault = defaults.isEnabledByDefault
+    state.lastSession = defaults.lastSession
+    if let session = defaults.lastSession {
+      state.active = true
+      state.activeItem = ActivationSpecs.spec(for: session)
+    }
     return state
-  case .activate(let item):
+  case .activate(let session):
+    Defaults().lastSession = session
+
     var newState = state
     newState.active = true
-    newState.activeItem = item
+    if let session = session {
+      newState.lastSession = session
+      newState.activeItem = ActivationSpecs.spec(for: session)
+    }
     return newState
   case .deactivate:
+    Defaults().lastSession = nil
+
     var newState = state
     newState.active = false
     newState.activeItem = nil
+    newState.lastSession = nil
     return newState
   case .setDisableAfterSuspendEnabled(let enabled):
     Defaults().isDisableAfterSuspendEnabled = enabled
@@ -64,6 +81,12 @@ func appReducer(state: State, action: Action) -> State {
 
     var newState = state
     newState.isLoginItemEnabled = enabled
+    return newState
+  case .setIsEnabledByDefault(let enabled):
+    Defaults().isEnabledByDefault = enabled
+
+    var newState = state
+    newState.isEnabledByDefault = enabled
     return newState
   }
 }

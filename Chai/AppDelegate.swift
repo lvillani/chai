@@ -17,8 +17,6 @@ import Cocoa
 import ServiceManagement
 import os
 
-let oneHour = TimeInterval(3600)  // Seconds
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   // Globals
@@ -35,22 +33,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   let statusMenu = NSMenu(title: appName)
 
   let headerItem = NSMenuItem(title: "Keep This Mac Awake", action: nil, keyEquivalent: "")
-  let launchAtLoginItem = NSMenuItem(
-    title: "Launch at Login", action: #selector(launchAtLoginAction), keyEquivalent: "")
+
+  let launchAtLoginItem = NSMenuItem(title: "Launch at Login", action: #selector(launchAtLoginAction), keyEquivalent: "")
+  let lauchEnabledItem = NSMenuItem(
+    title: "Use Last Session", action: #selector(lauchEnabledAction), keyEquivalent: "")
 
   let preferences = NSMenuItem(title: "Preferences", action: nil, keyEquivalent: "")
   let disableAfterSuspend = NSMenuItem(
     title: "Disable After Suspend", action: #selector(disableAfterSuspendAction), keyEquivalent: "")
-
-  // Activation timers
-  let activationSpecs: [(String, TimeInterval, String)] = [
-    ("Forever", 0, "0"),
-    ("30 Minutes", oneHour / 2, ""),
-    ("1 Hour", oneHour, "1"),
-    ("2 Hours", 2 * oneHour, "2"),
-    ("4 Hours", 4 * oneHour, "4"),
-    ("8 Hours", 8 * oneHour, "8"),
-  ]
 
   var activationItems: [MenuItem] = []
 
@@ -87,6 +77,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
     statusMenu.addItem(NSMenuItem.separator())
     statusMenu.addItem(preferences)
 
+    // Lauch At Login
+    launchAtLoginItem.submenu = NSMenu(title: "Launch at Login")
+    launchAtLoginItem.submenu?.addItem(lauchEnabledItem)
+
     // Global
     statusMenu.addItem(NSMenuItem.separator())
     statusMenu.addItem(launchAtLoginItem)
@@ -111,10 +105,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   }
 
   func initMenuItems() {
-    for itemSpec in activationSpecs {
+    ActivationSpecs.allCases.forEach { itemSpec in
       let item = MenuItem(
-        title: itemSpec.0, action: #selector(activateAction(sender:)), keyEquivalent: itemSpec.2)
-      item.timerDuration = itemSpec.1
+        title: itemSpec.spec.title, action: #selector(activateAction(sender:)), keyEquivalent: itemSpec.spec.label)
+        item.timerDuration = itemSpec.spec.timeInterval
 
       activationItems.append(item)
       statusMenu.addItem(item)
@@ -150,18 +144,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
       item.state = .off
     }
 
-    state.activeItem?.state = .on
+    activationItems.first { menu in
+        menu.title == state.activeItem?.title
+    }?.state = .on
 
     // Disable after suspend
     disableAfterSuspend.state = state.isDisableAfterSuspendEnabled ? .on : .off
 
     // Login Item
     launchAtLoginItem.state = state.isLoginItemEnabled ? .on : .off
+    lauchEnabledItem.state = state.isEnabledByDefault ? .on : .off
   }
 
   @objc func activateAction(sender: MenuItem) {
     var newActivationState = !globalStore.state.active
-    if globalStore.state.activeItem != sender {
+    if globalStore.state.activeItem?.title != sender.title {
       newActivationState = true
     }
 
@@ -181,7 +178,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
         })
     }
 
-    globalStore.dispatch(action: .activate(sender))
+    globalStore.dispatch(action: .activate(sender.title))
     os_log("Activated")
   }
 
@@ -218,6 +215,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
     globalStore.dispatch(action: .setLoginItemEnabled(newState))
     os_log("Launch at login: %{public}s", newState ? "enabled" : "disabled")
+  }
+
+  @objc func lauchEnabledAction() {
+    globalStore.dispatch(action: .setIsEnabledByDefault(!globalStore.state.isEnabledByDefault))
   }
 
   @objc func quitAction() {
