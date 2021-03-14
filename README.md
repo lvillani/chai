@@ -5,8 +5,6 @@
 _Don't let your Mac fall asleep, like a sir_
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://choosealicense.com/licenses/gpl-3.0/)
-![Bugs](https://img.shields.io/badge/bugs-nope-ff69b4.svg)
-![Mojave Ready](https://img.shields.io/badge/mojave-ready-yellowgreen.svg)
 
 --------------------------------------------------------------------------------
 
@@ -25,7 +23,6 @@ _Don't let your Mac fall asleep, like a sir_
 Chai is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
 * It's open source, we have nothing to hide.
-* The monochrome icon adapts nicely to light and dark themes. It's ready for Mojave.
 * Uses [power assertions][IOPMLib] to keep your Mac awake.
 * It runs in the [sandbox][sandbox] to keep your Mac secure.
 * Tea is supposedly better than coffee.
