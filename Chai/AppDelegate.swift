@@ -19,8 +19,6 @@ import Cocoa
 import ServiceManagement
 import os
 
-let oneHour = TimeInterval(3600)  // Seconds
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   // Globals
@@ -43,16 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   let preferences = NSMenuItem(title: "Preferences", action: nil, keyEquivalent: "")
   let disableAfterSuspend = NSMenuItem(
     title: "Disable After Suspend", action: #selector(disableAfterSuspendAction), keyEquivalent: "")
-
-  // Activation timers
-  let activationSpecs: [(String, TimeInterval, String)] = [
-    ("Forever", 0, "0"),
-    ("30 Minutes", oneHour / 2, ""),
-    ("1 Hour", oneHour, "1"),
-    ("2 Hours", 2 * oneHour, "2"),
-    ("4 Hours", 4 * oneHour, "4"),
-    ("8 Hours", 8 * oneHour, "8"),
-  ]
 
   var activationItems: [MenuItem] = []
 
@@ -113,10 +101,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   }
 
   func initMenuItems() {
-    for itemSpec in activationSpecs {
+    ActivationSpecs.allCases.forEach { itemSpec in
       let item = MenuItem(
-        title: itemSpec.0, action: #selector(activateAction(sender:)), keyEquivalent: itemSpec.2)
-      item.timerDuration = itemSpec.1
+        title: itemSpec.spec.title, action: #selector(activateAction(sender:)),
+        keyEquivalent: itemSpec.spec.label)
+      item.timerDuration = itemSpec.spec.timeInterval
 
       activationItems.append(item)
       statusMenu.addItem(item)
@@ -152,7 +141,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
       item.state = .off
     }
 
-    state.activeItem?.state = .on
+    activationItems.first { menu in
+      menu.title == state.activeSpec?.title
+    }?.state = .on
 
     // Disable after suspend
     disableAfterSuspend.state = state.isDisableAfterSuspendEnabled ? .on : .off
@@ -163,7 +154,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
   @objc func activateAction(sender: MenuItem) {
     var newActivationState = !globalStore.state.active
-    if globalStore.state.activeItem != sender {
+    if globalStore.state.activeSpec != ActivationSpecs.spec(for: sender.title) {
       newActivationState = true
     }
 
@@ -183,7 +174,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
         })
     }
 
-    globalStore.dispatch(action: .activate(sender))
+    globalStore.dispatch(action: .activate(ActivationSpecs.spec(for: sender.title)))
     os_log("Activated")
   }
 

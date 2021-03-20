@@ -23,7 +23,7 @@ import Dispatch
 
 enum Action {
   case initialize
-  case activate(MenuItem?)
+  case activate(ActivationSpec?)
   case deactivate
   case setDisableAfterSuspendEnabled(Bool)
   case setLoginItemEnabled(Bool)
@@ -31,7 +31,7 @@ enum Action {
 
 struct State {
   var active: Bool = false
-  var activeItem: MenuItem? = nil
+  var activeSpec: ActivationSpec? = nil
   var isDisableAfterSuspendEnabled: Bool = false
   var isLoginItemEnabled: Bool = false
 }
@@ -45,15 +45,15 @@ func appReducer(state: State, action: Action) -> State {
     state.isDisableAfterSuspendEnabled = defaults.isDisableAfterSuspendEnabled
     state.isLoginItemEnabled = defaults.isLoginItemEnabled
     return state
-  case .activate(let item):
+  case .activate(let activationSpec):
     var newState = state
     newState.active = true
-    newState.activeItem = item
+    newState.activeSpec = activationSpec
     return newState
   case .deactivate:
     var newState = state
     newState.active = false
-    newState.activeItem = nil
+    newState.activeSpec = nil
     return newState
   case .setDisableAfterSuspendEnabled(let enabled):
     Defaults().isDisableAfterSuspendEnabled = enabled

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F85C7EC25E42A4600CAF79F /* ActivationSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */; };
 		BF156ACF217B24FD00554D25 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF156ACE217B24FD00554D25 /* State.swift */; };
 		BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */; };
 		BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF543F522123FE2D0059FA64 /* MainMenu.xib */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationSpecs.swift; sourceTree = "<group>"; };
 		BF156ACE217B24FD00554D25 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaiHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,11 +129,12 @@
 				BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */,
 				BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */,
 				BF7F8A431A6C130200F80CCE /* Info.plist */,
+				2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */,
 				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
 				BF543F62212409600059FA64 /* Defaults.swift */,
+				BFA959B22164A38400B5F7AA /* MenuItem.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
 				BF156ACE217B24FD00554D25 /* State.swift */,
-				BFA959B22164A38400B5F7AA /* MenuItem.swift */,
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
 				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
@@ -258,6 +261,7 @@
 				BF543F63212409600059FA64 /* Defaults.swift in Sources */,
 				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
 				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,
+				2F85C7EC25E42A4600CAF79F /* ActivationSpecs.swift in Sources */,
 				BF156ACF217B24FD00554D25 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
