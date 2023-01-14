@@ -63,8 +63,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
     headerItem.isEnabled = false
 
-    statusItem.action = #selector(statusItemClicked)
-    statusItem.sendAction(on: [.leftMouseUp, .rightMouseDown])
+    statusItem.button!.action = #selector(statusItemClicked)
+    statusItem.button!.sendAction(on: [.leftMouseUp, .rightMouseDown])
 
     // Timers
     statusMenu.addItem(headerItem)
@@ -134,7 +134,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
   func stateChanged(state: State) {
     // Icon
-    statusItem.image = state.active ? iconOn : iconOff
+    statusItem.button!.image = state.active ? iconOn : iconOff
 
     // Timers
     for item in activationItems {
