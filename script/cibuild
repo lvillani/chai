@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -eux
+
+cd "$(dirname "${0}")/../"
+
+TOP_LEVEL="$(pwd)"
+
+# Build
+if [ -x "$(which xcpretty)" ]; then
+    xcodebuild | xcpretty
+else
+    xcodebuild
+fi
+
+# Deploy
+rm -rf deploy
+mkdir -p deploy
+( cd build/Release && zip -r "${TOP_LEVEL}/deploy/Chai.zip" Chai.app )
+
