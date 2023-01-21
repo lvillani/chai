@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -186,6 +186,7 @@
 		BF7F8A371A6C130200F80CCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Lorenzo Villani";
