@@ -12,7 +12,7 @@ _Don't let your Mac fall asleep, like a sir_
 
 ### Homebrew
 
-    brew cask install chai
+    brew install chai
 
 ## How Does It Look Like?
 
