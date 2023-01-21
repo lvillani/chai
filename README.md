@@ -25,7 +25,6 @@ Chai is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of 
 * It's open source, we have nothing to hide.
 * Uses [power assertions][IOPMLib] to keep your Mac awake.
 * It runs in the [sandbox][sandbox] to keep your Mac secure.
-* Tea is supposedly better than coffee.
 
 ## Icons
 
