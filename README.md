@@ -12,7 +12,13 @@ _Don't let your Mac fall asleep, like a sir_
 
 ### Homebrew
 
+Stable releases:
+
     brew install chai
+
+Pre-releases:
+
+    brew install lvillani/tap/chai
 
 ## How Does It Look Like?
 
