@@ -10,8 +10,6 @@ _Don't let your Mac fall asleep, like a sir_
 
 ## Installation
 
-### Homebrew
-
 Stable releases:
 
     brew install chai
