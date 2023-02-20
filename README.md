@@ -18,7 +18,7 @@ Pre-releases:
 
     brew install lvillani/tap/chai
 
-## How Does It Look Like?
+## How Does It Look?
 
 <img src="screenshot.png" width="640" height="400">
 
