@@ -10,11 +10,10 @@ _Don't let your Mac fall asleep, like a sir_
 
 ## Installation
 
-Stable releases:
-
-    brew install chai
-
-Pre-releases:
+> [!NOTE]
+>
+> Chai fails Gatekeeper checks and will be removed from official Homebrew Casks on 2026-09-01. It
+> must be installed from the tap:
 
     brew install lvillani/tap/chai
 
