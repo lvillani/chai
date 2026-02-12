@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 //
 // Chai - Don't let your Mac fall asleep, like a sir
-// Copyright (C) 2023 Chai authors
+// Copyright (C) 2026 Chai authors
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
