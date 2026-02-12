@@ -18,7 +18,7 @@
 import Cocoa
 import os
 
-@NSApplicationMain
+@main
 class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_: Notification) {
     // Find whether parent application is running

@@ -19,7 +19,7 @@ import Cocoa
 import ServiceManagement
 import os
 
-@NSApplicationMain
+@main
 class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   // Globals
   static let appName =
