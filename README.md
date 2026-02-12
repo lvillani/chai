@@ -26,8 +26,8 @@ Pre-releases:
 
 Chai is better than [Caffeine](http://lightheadsw.com/caffeine/) in a number of ways:
 
-* It's open source, we have nothing to hide.
-* Uses [power assertions][IOPMLib] to keep your Mac awake.
+* It is open source, so we have nothing to hide.
+* It uses [power assertions][IOPMLib] to keep your Mac awake.
 * It runs in the [sandbox][sandbox] to keep your Mac secure.
 
 ## Icons
