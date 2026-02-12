@@ -37,7 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let bundlePath = NSString(string: Bundle.main.bundlePath).pathComponents
     let parentPath = Array(bundlePath[..<(bundlePath.count - 4)])
 
-    NSWorkspace.shared.launchApplication(NSString.path(withComponents: parentPath))
-    NSRunningApplication.current.terminate()
+    let path = NSString.path(withComponents: parentPath)
+    let url = URL(fileURLWithPath: path)
+    NSWorkspace.shared.openApplication(at: url, configuration: NSWorkspace.OpenConfiguration()) { _, _ in
+        DispatchQueue.main.async {
+            NSRunningApplication.current.terminate()
+        }
+    }
   }
 }
