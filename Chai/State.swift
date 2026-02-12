@@ -15,8 +15,6 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import Dispatch
-
 //
 // Our stuff
 //
@@ -70,6 +68,7 @@ func appReducer(state: State, action: Action) -> State {
   }
 }
 
+@MainActor
 let globalStore = Store(reducer: appReducer, initialState: State())
 
 //
@@ -78,18 +77,19 @@ let globalStore = Store(reducer: appReducer, initialState: State())
 
 typealias Reducer = (State, Action) -> State
 
+@MainActor
 protocol StoreDelegate: AnyObject {
   func stateChanged(state: State)
 }
 
+@MainActor
 class Store {
-  private let queue = DispatchQueue(label: "StoreDispatchQueue")
   private let reducer: Reducer
 
   private var _state: State
   private var subscribers: [StoreDelegate] = []
 
-  public var state: State { return queue.sync { _state } }
+  public var state: State { return _state }
 
   public init(reducer: @escaping Reducer, initialState: State) {
     self.reducer = reducer
@@ -97,27 +97,21 @@ class Store {
   }
 
   public func dispatch(action: Action) {
-    queue.sync {
-      _state = reducer(_state, action)
+    _state = reducer(_state, action)
 
-      for subscriber in subscribers {
-        subscriber.stateChanged(state: _state)
-      }
+    for subscriber in subscribers {
+      subscriber.stateChanged(state: _state)
     }
   }
 
   public func subscribe(storeDelegate: StoreDelegate) {
-    queue.sync {
-      if !subscribers.contains(where: { $0 === storeDelegate }) {
-        subscribers.append(storeDelegate)
-        storeDelegate.stateChanged(state: _state)
-      }
+    if !subscribers.contains(where: { $0 === storeDelegate }) {
+      subscribers.append(storeDelegate)
+      storeDelegate.stateChanged(state: _state)
     }
   }
 
   public func unsubscribe(storeDelegate: StoreDelegate) {
-    queue.sync {
-      subscribers.removeAll(where: { $0 === storeDelegate })
-    }
+    subscribers.removeAll(where: { $0 === storeDelegate })
   }
 }

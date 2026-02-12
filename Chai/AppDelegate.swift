@@ -20,6 +20,7 @@ import ServiceManagement
 import os
 
 @main
+@MainActor
 class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
   // Globals
   static let appName =
@@ -167,15 +168,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, StoreDelegate {
 
     if sender.timerDuration > 0 {
       os_log("Scheduling deactivation in %f seconds", sender.timerDuration)
-      timer = Timer.scheduledTimer(
-        withTimeInterval: sender.timerDuration, repeats: false,
-        block: { (_) in
-          self.deactivate()
-        })
+      let t = Timer(
+        timeInterval: sender.timerDuration,
+        target: self,
+        selector: #selector(timerFired(_:)),
+        userInfo: nil,
+        repeats: false
+      )
+      RunLoop.main.add(t, forMode: .common)
+      timer = t
     }
 
     globalStore.dispatch(action: .activate(ActivationSpecs.spec(for: sender.title)))
     os_log("Activated")
+  }
+
+  @objc func timerFired(_ timer: Timer) {
+    os_log("Timer fired, deactivating")
+    deactivate()
   }
 
   func deactivate() {
