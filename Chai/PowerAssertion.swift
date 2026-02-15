@@ -15,8 +15,8 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import Foundation
-import IOKit
+import IOKit.pwr_mgt
+import os
 
 // This is seemingly not exposed to Swift
 enum Assertion: String {
@@ -37,9 +37,8 @@ class PowerAssertion {
       Assertion.NoDisplaySleep.rawValue as CFString, AssertionLevel.on.rawValue, name as CFString,
       &assertion)
 
-    // FIXME: Make this a fallible initializer
     if ret != kIOReturnSuccess {
-      NSLog("Oops: Couldn't grab the power assertion")
+      os_log("Couldn't grab the power assertion")
     }
   }
 
@@ -47,7 +46,7 @@ class PowerAssertion {
     let ret = IOPMAssertionRelease(assertion)
 
     if ret != kIOReturnSuccess {
-      NSLog("Oops: Couldn't release the power assertion")
+      os_log("Couldn't release the power assertion")
     }
   }
 }

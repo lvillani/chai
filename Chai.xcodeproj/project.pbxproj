@@ -13,12 +13,9 @@
 		BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF543F522123FE2D0059FA64 /* MainMenu.xib */; };
 		BF543F5B2123FE920059FA64 /* ChaiHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF543F5F2123FF130059FA64 /* ServiceManagement.framework */; };
-		BF543F63212409600059FA64 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F62212409600059FA64 /* Defaults.swift */; };
-		BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A441A6C130200F80CCE /* AppDelegate.swift */; };
 		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
-		BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A481A6C130200F80CCE /* MainMenu.xib */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
-		BFA959B32164A38400B5F7AA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA959B22164A38400B5F7AA /* MenuItem.swift */; };
+		CC000001AAAA000000000001 /* ChaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000001AAAA000000000002 /* ChaiApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,16 +51,12 @@
 		BF543F552123FE2D0059FA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF543F562123FE2D0059FA64 /* ChaiHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChaiHelper.entitlements; sourceTree = "<group>"; };
 		BF543F5F2123FF130059FA64 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		BF543F62212409600059FA64 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		BF7F8A3F1A6C130200F80CCE /* Chai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF7F8A441A6C130200F80CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7F8A461A6C130200F80CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF7F8A491A6C130200F80CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerAssertion.swift; sourceTree = "<group>"; };
-		BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chai-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chai.entitlements; sourceTree = "<group>"; };
-		BFA959B22164A38400B5F7AA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		CC000001AAAA000000000002 /* ChaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaiApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +120,12 @@
 			isa = PBXGroup;
 			children = (
 				BFA8A0641B3C4B3C00C640A5 /* Chai.entitlements */,
-				BF7F8A631A6C137300F80CCE /* Chai-Bridging-Header.h */,
 				BF7F8A431A6C130200F80CCE /* Info.plist */,
 				2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */,
-				BF7F8A441A6C130200F80CCE /* AppDelegate.swift */,
-				BF543F62212409600059FA64 /* Defaults.swift */,
-				BFA959B22164A38400B5F7AA /* MenuItem.swift */,
+				CC000001AAAA000000000002 /* ChaiApp.swift */,
 				BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */,
 				BF156ACE217B24FD00554D25 /* State.swift */,
 				BF7F8A461A6C130200F80CCE /* Assets.xcassets */,
-				BF7F8A481A6C130200F80CCE /* MainMenu.xib */,
 			);
 			path = Chai;
 			sourceTree = "<group>";
@@ -239,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */,
-				BF7F8A4A1A6C130200F80CCE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA959B32164A38400B5F7AA /* MenuItem.swift in Sources */,
-				BF543F63212409600059FA64 /* Defaults.swift in Sources */,
 				BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */,
-				BF7F8A451A6C130200F80CCE /* AppDelegate.swift in Sources */,
+				CC000001AAAA000000000001 /* ChaiApp.swift in Sources */,
 				2F85C7EC25E42A4600CAF79F /* ActivationSpecs.swift in Sources */,
 				BF156ACF217B24FD00554D25 /* State.swift in Sources */,
 			);
@@ -282,14 +268,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF543F532123FE2D0059FA64 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		BF7F8A481A6C130200F80CCE /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF7F8A491A6C130200F80CCE /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -323,7 +301,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -358,7 +336,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -495,12 +473,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.Chai;
 				PRODUCT_NAME = Chai;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chai/Chai-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 			};
@@ -524,11 +501,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.Chai;
 				PRODUCT_NAME = Chai;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chai/Chai-Bridging-Header.h";
 				SWIFT_VERSION = 6.0;
 			};
 			name = Release;

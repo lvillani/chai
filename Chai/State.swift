@@ -15,103 +15,44 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-//
-// Our stuff
-//
+import Foundation
+import Observation
 
-enum Action {
-  case initialize
-  case activate(ActivationSpec?)
-  case deactivate
-  case setDisableAfterSuspendEnabled(Bool)
-  case setLoginItemEnabled(Bool)
-}
+@Observable
+@MainActor
+final class AppState {
+  private enum DefaultsKey {
+    static let disableAfterSuspend = "DisableAfterSuspend"
+    static let loginItemEnabled = "LoginItemEnabled"
+  }
 
-struct State {
-  var active: Bool = false
+  var isActive: Bool = false
   var activeSpec: ActivationSpec? = nil
   var isDisableAfterSuspendEnabled: Bool = false
   var isLoginItemEnabled: Bool = false
-}
 
-func appReducer(state: State, action: Action) -> State {
-  switch action {
-  case .initialize:
-    let defaults = Defaults()
-
-    var state = State()
-    state.isDisableAfterSuspendEnabled = defaults.isDisableAfterSuspendEnabled
-    state.isLoginItemEnabled = defaults.isLoginItemEnabled
-    return state
-  case .activate(let activationSpec):
-    var newState = state
-    newState.active = true
-    newState.activeSpec = activationSpec
-    return newState
-  case .deactivate:
-    var newState = state
-    newState.active = false
-    newState.activeSpec = nil
-    return newState
-  case .setDisableAfterSuspendEnabled(let enabled):
-    Defaults().isDisableAfterSuspendEnabled = enabled
-
-    var newState = state
-    newState.isDisableAfterSuspendEnabled = enabled
-    return newState
-  case .setLoginItemEnabled(let enabled):
-    Defaults().isLoginItemEnabled = enabled
-
-    var newState = state
-    newState.isLoginItemEnabled = enabled
-    return newState
-  }
-}
-
-@MainActor
-let globalStore = Store(reducer: appReducer, initialState: State())
-
-//
-// Infrastructure
-//
-
-typealias Reducer = (State, Action) -> State
-
-@MainActor
-protocol StoreDelegate: AnyObject {
-  func stateChanged(state: State)
-}
-
-@MainActor
-class Store {
-  private let reducer: Reducer
-
-  private var _state: State
-  private var subscribers: [StoreDelegate] = []
-
-  public var state: State { return _state }
-
-  public init(reducer: @escaping Reducer, initialState: State) {
-    self.reducer = reducer
-    self._state = initialState
+  init() {
+    isDisableAfterSuspendEnabled = UserDefaults.standard.bool(forKey: DefaultsKey.disableAfterSuspend)
+    isLoginItemEnabled = UserDefaults.standard.bool(forKey: DefaultsKey.loginItemEnabled)
   }
 
-  public func dispatch(action: Action) {
-    _state = reducer(_state, action)
-
-    for subscriber in subscribers {
-      subscriber.stateChanged(state: _state)
-    }
+  func activate(spec: ActivationSpec?) {
+    isActive = true
+    activeSpec = spec
   }
 
-  public func subscribe(storeDelegate: StoreDelegate) {
-    if !subscribers.contains(where: { $0 === storeDelegate }) {
-      subscribers.append(storeDelegate)
-      storeDelegate.stateChanged(state: _state)
-    }
+  func deactivate() {
+    isActive = false
+    activeSpec = nil
   }
 
-  public func unsubscribe(storeDelegate: StoreDelegate) {
-    subscribers.removeAll(where: { $0 === storeDelegate })
+  func setDisableAfterSuspend(_ enabled: Bool) {
+    UserDefaults.standard.set(enabled, forKey: DefaultsKey.disableAfterSuspend)
+    isDisableAfterSuspendEnabled = enabled
+  }
+
+  func setLoginItemEnabled(_ enabled: Bool) {
+    UserDefaults.standard.set(enabled, forKey: DefaultsKey.loginItemEnabled)
+    isLoginItemEnabled = enabled
   }
 }
