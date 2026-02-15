@@ -9,24 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F85C7EC25E42A4600CAF79F /* ActivationSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */; };
 		BF156ACF217B24FD00554D25 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF156ACE217B24FD00554D25 /* State.swift */; };
-		BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */; };
-		BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF543F522123FE2D0059FA64 /* MainMenu.xib */; };
-		BF543F5B2123FE920059FA64 /* ChaiHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF543F5F2123FF130059FA64 /* ServiceManagement.framework */; };
 		BF7F8A471A6C130200F80CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F8A461A6C130200F80CCE /* Assets.xcassets */; };
 		BF7F8A601A6C134D00F80CCE /* PowerAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8A5F1A6C134D00F80CCE /* PowerAssertion.swift */; };
 		CC000001AAAA000000000001 /* ChaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000001AAAA000000000002 /* ChaiApp.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BF543F5C2123FE9D0059FA64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF7F8A371A6C130200F80CCE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF543F4B2123FE2C0059FA64;
-			remoteInfo = ChaiHelper;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BF543F5A2123FE770059FA64 /* Copy Helper */ = {
@@ -35,7 +21,6 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				BF543F5B2123FE920059FA64 /* ChaiHelper.app in Copy Helper */,
 			);
 			name = "Copy Helper";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,11 +30,6 @@
 /* Begin PBXFileReference section */
 		2F85C7EB25E42A4600CAF79F /* ActivationSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationSpecs.swift; sourceTree = "<group>"; };
 		BF156ACE217B24FD00554D25 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaiHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF543F532123FE2D0059FA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		BF543F552123FE2D0059FA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF543F562123FE2D0059FA64 /* ChaiHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChaiHelper.entitlements; sourceTree = "<group>"; };
 		BF543F5F2123FF130059FA64 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		BF7F8A3F1A6C130200F80CCE /* Chai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F8A431A6C130200F80CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,14 +40,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BF543F492123FE2C0059FA64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF543F61212403170059FA64 /* ServiceManagement.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF7F8A3C1A6C130200F80CCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,17 +50,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF543F4D2123FE2D0059FA64 /* ChaiHelper */ = {
-			isa = PBXGroup;
-			children = (
-				BF543F562123FE2D0059FA64 /* ChaiHelper.entitlements */,
-				BF543F552123FE2D0059FA64 /* Info.plist */,
-				BF543F4E2123FE2D0059FA64 /* AppDelegate.swift */,
-				BF543F522123FE2D0059FA64 /* MainMenu.xib */,
-			);
-			path = ChaiHelper;
-			sourceTree = "<group>";
-		};
 		BF543F5E2123FF130059FA64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				BF7F8A411A6C130200F80CCE /* Chai */,
-				BF543F4D2123FE2D0059FA64 /* ChaiHelper */,
 				BF543F5E2123FF130059FA64 /* Frameworks */,
 				BF7F8A401A6C130200F80CCE /* Products */,
 			);
@@ -111,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				BF7F8A3F1A6C130200F80CCE /* Chai.app */,
-				BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,23 +92,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF543F4B2123FE2C0059FA64 /* ChaiHelper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "ChaiHelper" */;
-			buildPhases = (
-				BF543F482123FE2C0059FA64 /* Sources */,
-				BF543F492123FE2C0059FA64 /* Frameworks */,
-				BF543F4A2123FE2C0059FA64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ChaiHelper;
-			productName = ChaiHelper;
-			productReference = BF543F4C2123FE2C0059FA64 /* ChaiHelper.app */;
-			productType = "com.apple.product-type.application";
-		};
 		BF7F8A3E1A6C130200F80CCE /* Chai */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF7F8A591A6C130200F80CCE /* Build configuration list for PBXNativeTarget "Chai" */;
@@ -162,7 +104,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */,
 			);
 			name = Chai;
 			productName = Chai;
@@ -180,10 +121,6 @@
 				LastUpgradeCheck = 2620;
 				ORGANIZATIONNAME = "Lorenzo Villani";
 				TargetAttributes = {
-					BF543F4B2123FE2C0059FA64 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1030;
-					};
 					BF7F8A3E1A6C130200F80CCE = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 1030;
@@ -209,20 +146,11 @@
 			projectRoot = "";
 			targets = (
 				BF7F8A3E1A6C130200F80CCE /* Chai */,
-				BF543F4B2123FE2C0059FA64 /* ChaiHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BF543F4A2123FE2C0059FA64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF543F542123FE2D0059FA64 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF7F8A3D1A6C130200F80CCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,14 +162,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BF543F482123FE2C0059FA64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF543F4F2123FE2D0059FA64 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF7F8A3B1A6C130200F80CCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,95 +175,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BF543F5D2123FE9D0059FA64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF543F4B2123FE2C0059FA64 /* ChaiHelper */;
-			targetProxy = BF543F5C2123FE9D0059FA64 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BF543F522123FE2D0059FA64 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF543F532123FE2D0059FA64 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		BF543F572123FE2D0059FA64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ChaiHelper/ChaiHelper.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ChaiHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 6.0;
-			};
-			name = Debug;
-		};
-		BF543F582123FE2D0059FA64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ChaiHelper/ChaiHelper.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ChaiHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.villani.lorenzo.ChaiHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 6.0;
-			};
-			name = Release;
-		};
 		BF7F8A571A6C130200F80CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -512,15 +344,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF543F592123FE2D0059FA64 /* Build configuration list for PBXNativeTarget "ChaiHelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF543F572123FE2D0059FA64 /* Debug */,
-				BF543F582123FE2D0059FA64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BF7F8A3A1A6C130200F80CCE /* Build configuration list for PBXProject "Chai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
